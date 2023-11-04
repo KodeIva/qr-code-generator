@@ -8,6 +8,10 @@ function App() {
   const [link, setLink] = useState('')
   const [name, setName] = useState('')
 
+  function linkChange(e) {
+    setLink(e.target.value)
+  }
+
   return (
     <div className="App">
       <h1>QR Code Generator</h1>
@@ -15,7 +19,7 @@ function App() {
         <QRCode
           size={256}
           style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-          value={value}
+          value={link}
           viewBox={`0 0 256 256`}
         />
       </div>
@@ -23,7 +27,7 @@ function App() {
       <div>
         <div>
           <h4>Enter your link</h4>
-          <input type='text' value={link} />
+          <input type='text' value={link} onChange={(e) => linkChange(e)} />
         </div>
         <div>
           <h4>Enter website name </h4>
