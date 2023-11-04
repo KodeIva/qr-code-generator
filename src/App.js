@@ -8,6 +8,7 @@ function App() {
   const [link, setLink] = useState('')
   const [name, setName] = useState('')
   const [codes, setCodes] = useState([])
+  const [isClicked, setIsClicked] = useState(false)
 
   function linkChange(e) {
     setLink(e.target.value)
@@ -18,6 +19,7 @@ function App() {
   }
 
   function generator() {
+    setIsClicked(true)
     codes.push({link:link, name:name})
   }
 
@@ -43,6 +45,7 @@ function App() {
           <input type='text' value={name} onChange={(e) => nameChange(e)} />
         </div>
         <button onClick={generator}>Generate</button>
+        {isClicked && <div><QRCode value={link}/><h1>{name}</h1></div>}
       </div>
     </div>
   );
