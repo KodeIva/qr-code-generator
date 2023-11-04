@@ -2,6 +2,7 @@ import QRCode from "react-qr-code";
 
 import './App.css';
 import { useState } from "react";
+import CodesList from "./component/CodesList";
 
 function App() {
 
@@ -47,7 +48,7 @@ function App() {
           <input type='text' value={name} onChange={(e) => nameChange(e)} />
         </div>
         <button onClick={generator}>Generate</button>
-        {isClicked && <div><QRCode value={link}/><h1>{name}</h1></div>}
+        {isClicked && <CodesList link={link} name={name}/>}
       </div>
     </div>
   );
