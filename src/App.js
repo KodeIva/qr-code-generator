@@ -21,6 +21,8 @@ function App() {
   function generator() {
     setIsClicked(true)
     codes.push({link:link, name:name})
+    setLink('')
+    setName('')
   }
 
   return (
