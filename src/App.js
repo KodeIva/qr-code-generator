@@ -7,6 +7,7 @@ function App() {
 
   const [link, setLink] = useState('')
   const [name, setName] = useState('')
+  const [codes, setCodes] = useState([])
 
   function linkChange(e) {
     setLink(e.target.value)
@@ -14,6 +15,10 @@ function App() {
 
   function nameChange(e) {
     setName(e.target.value)
+  }
+
+  function generator() {
+    codes.push({link:link, name:name})
   }
 
   return (
@@ -37,7 +42,7 @@ function App() {
           <h4>Enter website name </h4>
           <input type='text' value={name} onChange={(e) => nameChange(e)} />
         </div>
-        <button>Generate</button>
+        <button onClick={generator}>Generate</button>
       </div>
     </div>
   );
