@@ -12,6 +12,10 @@ function App() {
     setLink(e.target.value)
   }
 
+  function nameChange(e) {
+    setName(e.target.value)
+  }
+
   return (
     <div className="App">
       <h1>QR Code Generator</h1>
@@ -31,7 +35,7 @@ function App() {
         </div>
         <div>
           <h4>Enter website name </h4>
-          <input type='text' value={name} />
+          <input type='text' value={name} onChange={(e) => nameChange(e)} />
         </div>
         <button>Generate</button>
       </div>
