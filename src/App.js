@@ -12,16 +12,24 @@ function App() {
   const [isClicked, setIsClicked] = useState(false)
 
   function linkChange(e) {
+    e.preventDefault()
     setLink(e.target.value)
   }
 
   function nameChange(e) {
+    e.preventDefault()
     setName(e.target.value)
   }
 
-  function generator() {
+  function generator(e) {
+    e.preventDefault()
     setIsClicked(true)
-    codes.push({link:link, name:name})
+
+    if(!name && !link) return null
+    else {
+       codes.push({link:link, name:name})
+    }
+   
     setLink('')
     setName('')
   }
