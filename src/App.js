@@ -1,7 +1,13 @@
 import QRCode from "react-qr-code";
+
 import './App.css';
+import { useState } from "react";
 
 function App() {
+
+  const [link, setLink] = useState('')
+  const [name, setName] = useState('')
+
   return (
     <div className="App">
       <h1>QR Code Generator</h1>
@@ -17,11 +23,11 @@ function App() {
       <div>
         <div>
           <h4>Enter your link</h4>
-          <input type='text' />
+          <input type='text' value={link} />
         </div>
         <div>
           <h4>Enter website name </h4>
-          <input type='text' />
+          <input type='text' value={name} />
         </div>
         <button>Generate</button>
       </div>
