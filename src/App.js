@@ -51,7 +51,7 @@ function App() {
           onClick={generator}>
             Generate
         </button>
-           {isClicked && <div>
+           {isClicked && <div className='flex flex-wrap'>
             {codes.map((code) => {
               return (
                <CodesList link={code.link} name={code.name}/>
