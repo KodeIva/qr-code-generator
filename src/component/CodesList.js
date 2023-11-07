@@ -11,7 +11,7 @@ const CodesList = ({link, name}) => {
           value={link}
           viewBox={`0 0 256 256`}
          ></QRCode>
-         <h4>{name}</h4>
+         <h4 className='text-lg font-medium mt-3 font-mono'>{name}</h4>
       </li>
     </ul>
   )
