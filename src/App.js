@@ -35,16 +35,16 @@ function App() {
 
   return (
     <div className="App bg-slate-100 w-full h-[100vh]">
-      <h1 className='text-2xl font-semibold pt-9 mb-9'>QR Code Generator</h1>
+      <h1 className='text-3xl text-slate-700 font-semibold pt-9 mb-9'>QR Code Generator</h1>
   
       <div className='bg-pink-200 py-8'>
         <div className='bg-orange-100 my-3 py-4'>
-          <h4>Enter your link</h4>
-          <input type='text' value={link} onChange={(e) => linkChange(e)} />
+          <h4 className='text-lg font-medium mb-2 text-slate-700'>Enter your link</h4>
+          <input className='h-10 w-60 rounded-xl shadow-md outline-none pl-3' type='text' value={link} onChange={(e) => linkChange(e)} />
         </div>
         <div className='bg-orange-100 my-3 py-4'>
-          <h4>Enter website name </h4>
-          <input type='text' value={name} onChange={(e) => nameChange(e)} />
+          <h4 className='text-lg font-medium mb-2 text-slate-700'>Enter website name </h4>
+          <input className='h-10 w-60 rounded-xl shadow-md outline-none pl-3' type='text' value={name} onChange={(e) => nameChange(e)} />
         </div>
         <button onClick={generator}>Generate</button>
         {isClicked && <div>
