@@ -34,15 +34,15 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1>QR Code Generator</h1>
+    <div className="App bg-slate-100 w-full h-[100vh]">
+      <h1 className='text-2xl font-semibold pt-9 mb-9'>QR Code Generator</h1>
   
-      <div>
-        <div>
+      <div className='bg-pink-200 py-8'>
+        <div className='bg-orange-100 my-3 py-4'>
           <h4>Enter your link</h4>
           <input type='text' value={link} onChange={(e) => linkChange(e)} />
         </div>
-        <div>
+        <div className='bg-orange-100 my-3 py-4'>
           <h4>Enter website name </h4>
           <input type='text' value={name} onChange={(e) => nameChange(e)} />
         </div>
