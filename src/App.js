@@ -37,7 +37,7 @@ function App() {
     <div className="App bg-slate-100 w-full h-[100vh]">
       <h1 className='text-3xl text-slate-700 font-semibold pt-9 mb-9'>QR Code Generator</h1>
   
-      <div className='bg-pink-200 py-8'>
+      <div className=' py-1'>
         <div className='my-3 py-4'>
           <h4 className='text-lg font-medium mb-2 text-slate-700'>Enter your link</h4>
           <input className='h-10 w-60 rounded-xl shadow-md outline-none pl-3' type='text' value={link} onChange={(e) => linkChange(e)} />
@@ -51,7 +51,7 @@ function App() {
           onClick={generator}>
             Generate
         </button>
-           {isClicked && <div className='flex flex-wrap'>
+           {isClicked && <div className='flex flex-wrap justify-center items-center'>
             {codes.map((code) => {
               return (
                <CodesList link={code.link} name={code.name}/>
