@@ -9,16 +9,17 @@
 
   
 ## Description
+ This QR Code Generator was created to give me quick and easy way to connect with other tech professionals, to present my portfolio and CV. QR Code can be generated for any link as needed simply add the correct web address and click the 'Generate' button.
 
 
 ## Screenshot
  
-
+![](./public/images/Screenshot%20.png)
 
 
 ## Links
 
-- Solution URL: [Solution URL here](https://github.com/KodeIva/qr-code-generator)
+- Solution URL: [ here](https://github.com/KodeIva/qr-code-generator)
 - Live Site URL: [Live site](https://kodeiva.github.io/qr-code-generator/)
 
 
